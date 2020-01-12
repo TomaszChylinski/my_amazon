@@ -46,8 +46,8 @@ function userActions() {
         var itemSelected = answers.itemId;
         var unitAmount = answers.purchase;
 
-        console.log(itemSelected);
-        console.log(unitAmount);
+        console.log("Item id selected "+ itemSelected);
+        console.log("Number of units selected: "+ unitAmount);
     });
   });
 }
