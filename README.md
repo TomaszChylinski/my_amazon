@@ -14,8 +14,15 @@ Technologies used -
 
 * MySQL bamazon database including products table created in MySQL Workbench
 
-<img src="assets/images/bamazon_img1.png> 
+   
+
+     <img src="assets/images/bamazon_img1.PNG">    
+   
+
 
 * Inital connection with our database using our application
 
-<img src="assets/images/bamazon_img2.png> 
+
+
+
+<img src="assets/images/bamazon_img2.PNG">    
