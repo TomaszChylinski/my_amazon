@@ -5,4 +5,7 @@ Technologies used -
     * Inquierer - technology that allows us to interact with the user.
     * Node - The spine of our application that is enables us to connect with our database and with our user's requst. 
 
-    
+
+MySQL bamazon database including products table
+
+<img src="assets/images/word-guess-step2.png"> 
