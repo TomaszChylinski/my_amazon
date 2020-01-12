@@ -21,4 +21,4 @@ Node - The spine of our application that is enables us to connect with our datab
   <img src="assets/images/bamazon_img3.PNG">
 
 - Once the user selects their prefered item, they will be promted to input the amount of times they would like to purchase.
-  <img src="assets/images/bamazon_img3.PNG">
+  <img src="assets/images/bamazon_img4.PNG">

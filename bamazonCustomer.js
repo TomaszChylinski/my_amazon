@@ -32,7 +32,7 @@ function userActions() {
     }
     inquirer.prompt([
       {
-        name: "action",
+        name: "itemId",
         type: "list",
         message: "Which product Id are you intrested in buying?",
         choices: itemId
@@ -41,13 +41,13 @@ function userActions() {
         name: "purchase",
         type: "input",
         message: "How many units would you like to buy: "
-        /*validate: function(value) {
-          if (isNaN(value) === false) {
-            return true;
-          }
-          return false;*/
-        // }
       }
-    ]);
+    ]).then(answers => {
+        var itemSelected = answers.itemId;
+        var unitAmount = answers.purchase;
+
+        console.log(itemSelected);
+        console.log(unitAmount);
+    });
   });
 }
