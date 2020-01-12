@@ -1,4 +1,4 @@
-This application has the capability to handle user orders. Once user input is submitted the app will connect with an sql database to pull down data about the requested product. In addition the app will update the database to reflect the depleted stock. 
+This application has the capability to handle user orders. Once user input is submitted the application will connect with an sql database to pull down data about the requested product. In addition the application will update the database to reflect the depleted stock. 
 
 Technologies used - 
     * SQL - used to create bamazon database, which will hold our data. 
@@ -6,6 +6,10 @@ Technologies used -
     * Node - The spine of our application that is enables us to connect with our database and with our user's requst. 
 
 
-MySQL bamazon database including products table
+MySQL bamazon database including products table created in MySQL Workbench
 
-<img src="assets/images/word-guess-step2.png"> 
+<img src="assets/images/bamazon_img1.png> 
+
+Inital connection with our database using our application
+
+<img src="assets/images/bamazon_img2.png> 
