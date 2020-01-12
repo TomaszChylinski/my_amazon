@@ -30,11 +30,24 @@ function userActions() {
     for (var i = 0; i < res.length; i++) {
       itemId.push(res[i].item_id);
     }
-    inquirer.prompt({
-      name: "action",
-      type: "list",
-      message: "Which product Id are you intrested in buying?",
-      choices: itemId
-    });
+    inquirer.prompt([
+      {
+        name: "action",
+        type: "list",
+        message: "Which product Id are you intrested in buying?",
+        choices: itemId
+      },
+      {
+        name: "purchase",
+        type: "input",
+        message: "How many units would you like to buy: "
+        /*validate: function(value) {
+          if (isNaN(value) === false) {
+            return true;
+          }
+          return false;*/
+        // }
+      }
+    ]);
   });
 }
