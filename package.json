@@ -1,0 +1,23 @@
+{
+  "name": "my_amazon",
+  "version": "1.0.0",
+  "description": "This application has the capability to handle user orders. Once user input is submitted the app will connect with an sql database to pull down data about the requested product. In addition the app will update the database to reflect the depleted stock.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomaszChylinski/my_amazon.git"
+  },
+  "author": "Tomasz Chylinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomaszChylinski/my_amazon/issues"
+  },
+  "homepage": "https://github.com/TomaszChylinski/my_amazon#readme",
+  "dependencies": {
+    "inquirer": "^7.0.3",
+    "mysql": "^2.17.1"
+  }
+}
