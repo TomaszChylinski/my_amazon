@@ -29,6 +29,7 @@ Node - The spine of our application that is enables us to connect with our datab
 - Once the above step is complete the application will fetch the current inventory for the selected product Id. 
     
     Route A (failed purchase): If inventory is less than the requested amount the application will alert the user that the order cannot be filled.
+        
     <img src="assets/images/bamazon_img4.PNG">
 
     Route B (successful purchase): If inventory is able to cover the requested amount of item(s) the user wishes to purchase, the transaction will be fulfilled.
