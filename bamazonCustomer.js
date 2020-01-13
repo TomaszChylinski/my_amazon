@@ -48,7 +48,11 @@ function userActions() {
         var itemSelected = answers.itemId;
         var unitAmount = answers.purchase;
 
-        console.log("\n-------------------------------------------\n"  +  "Item id selected " + itemSelected);
+        console.log(
+          "\n-------------------------------------------\n" +
+            "Item id selected " +
+            itemSelected
+        );
         console.log("Number of units selected: " + unitAmount);
         getInventory();
 
@@ -56,7 +60,7 @@ function userActions() {
           var productDetail =
             "Select stock_quantity, price from products Where item_id =" +
             itemSelected;
-            
+
           connection.query(productDetail, function(err, res) {
             if (err) throw err;
             var remainingStock = res[0].stock_quantity;
@@ -75,12 +79,25 @@ function userActions() {
               acceptOrder();
               var totalPrice = itemPrice * unitAmount;
               console.log("Your total amount is $" + totalPrice);
-              console.log("Updated inventory: " + orderEffect + " items remaining for product id: " + itemSelected + "\n");
+              console.log(
+                "Updated inventory: " +
+                  orderEffect +
+                  " items remaining for product id: " +
+                  itemSelected +
+                  "\n"
+              );
+              updateInventory();
 
-              // update inventory 
-              // get price total 
-
-
+              function updateInventory() {
+                var updatedInv =
+                  "SELECT stock_quantity - " +
+                  unitAmount +
+                  " FROM products WHERE item_id = " +
+                  itemSelected;
+                connection.query(updatedInv, function(err, res) {
+                  if (err) throw err;
+                });
+              }
             }
           });
         }
@@ -90,9 +107,12 @@ function userActions() {
 
 function terminateOrder() {
   console.log(
-    "Sorry for the inconvience, but at the moment we don't have enough inventory to fullfill your order."
+    "Sorry for the inconvience, but at the moment we don't have enough inventory to fulfill your order."
   );
 }
 function acceptOrder() {
-  console.log("Thank you, your order has been filled" + "\n-------------------------------------------");
+  console.log(
+    "Thank you, your order has been filled" +
+      "\n-------------------------------------------"
+  );
 }
