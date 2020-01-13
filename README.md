@@ -34,4 +34,5 @@ Node - The spine of our application that is enables us to connect with our datab
 
     Route B (successful purchase): If inventory is able to cover the requested amount of item(s) the user wishes to purchase, the transaction will be fulfilled.
         The user will be alerted that the transaction was sucessfully completed, along with a summary that will provide the user with his total amount and the remaining inventory for that particular item. 
+        
     <img src="assets/images/bamazon_img5.PNG">
