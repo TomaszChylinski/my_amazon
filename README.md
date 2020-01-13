@@ -14,8 +14,18 @@ Node - The spine of our application that is enables us to connect with our datab
 - MySQL bamazon database including products table created in MySQL Workbench
   <img src="assets/images/bamazon_img1.PNG">
 
+- To get started please complete the following
+    1. Open my_amazon folder in your favorite terminal.
+    1. In the terminal input the following 'npm install' (installs all dependecies that the application requires to run)
+    2. Once dependecies are install you are ready to start the application please run 'bamazonCustomer.js' in your terminal to initiate 
+
 - Inital connection with our database using our application
   <img src="assets/images/bamazon_img2.PNG">
 
+
 - Using Inquierer the applications interacts with the user. Asking which product id they would be intrested in buying and how many units would they be willing to purchase
   <img src="assets/images/bamazon_img3.PNG">
+
+- Once the above step is complete the application will fetch the current inventory for the selected product Id. 
+    Route A: If inventory is less than the requested amount the application will alert the user that the order cannot be filled.
+      <img src="assets/images/bamazon_img4.PNG">

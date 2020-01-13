@@ -52,7 +52,6 @@ function userActions() {
         console.log("Number of units selected: " + unitAmount);
         getInventory();
 
-
         function getInventory() {
           var stockQuantity =
             "Select stock_quantity from products Where item_id =" +
@@ -60,15 +59,30 @@ function userActions() {
           connection.query(stockQuantity, function(err, res) {
             if (err) throw err;
             var remainingStock = res[0].stock_quantity;
-            console.log("Current inventory for item id "+ itemSelected + ": " + remainingStock + " items left");
+            console.log(
+              "Current inventory for product id " +
+                itemSelected +
+                ": " +
+                remainingStock +
+                " items left"
+            );
+            var orderEffect = remainingStock - unitAmount;
+            if (orderEffect < 0) {
+              terminateOrder();
+            } else {
+              acceptOrder();
+            }
           });
-
-          var fillOrder = false; 
-          var orderEffect = remainingStock - unitAmount;
-          console.log(orderEffect + ' show number of remianing inventory')
         }
-
-
       });
   });
+}
+
+function terminateOrder() {
+  console.log(
+    "Sorry for the inconvience, but at the moment we don't have enough inventory to fullfill your order."
+  );
+}
+function acceptOrder() {
+  console.log("Thank you, your order has been filled");
 }
