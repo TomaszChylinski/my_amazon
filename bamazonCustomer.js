@@ -48,17 +48,19 @@ function userActions() {
         var itemSelected = answers.itemId;
         var unitAmount = answers.purchase;
 
-        console.log("Item id selected " + itemSelected);
+        console.log("\n-------------------------------------------\n"  +  "Item id selected " + itemSelected);
         console.log("Number of units selected: " + unitAmount);
         getInventory();
 
         function getInventory() {
-          var stockQuantity =
-            "Select stock_quantity from products Where item_id =" +
+          var productDetail =
+            "Select stock_quantity, price from products Where item_id =" +
             itemSelected;
-          connection.query(stockQuantity, function(err, res) {
+            
+          connection.query(productDetail, function(err, res) {
             if (err) throw err;
             var remainingStock = res[0].stock_quantity;
+            var itemPrice = res[0].price;
             console.log(
               "Current inventory for product id " +
                 itemSelected +
@@ -71,6 +73,14 @@ function userActions() {
               terminateOrder();
             } else {
               acceptOrder();
+              var totalPrice = itemPrice * unitAmount;
+              console.log("Your total amount is $" + totalPrice);
+              console.log("Updated inventory: " + orderEffect + " items remaining for product id: " + itemSelected + "\n");
+
+              // update inventory 
+              // get price total 
+
+
             }
           });
         }
@@ -84,5 +94,5 @@ function terminateOrder() {
   );
 }
 function acceptOrder() {
-  console.log("Thank you, your order has been filled");
+  console.log("Thank you, your order has been filled" + "\n-------------------------------------------");
 }
