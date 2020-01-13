@@ -17,8 +17,5 @@ Node - The spine of our application that is enables us to connect with our datab
 - Inital connection with our database using our application
   <img src="assets/images/bamazon_img2.PNG">
 
-- Using inquierer the applications interacts with the user. Asking which product id they would be intrested in buying
+- Using Inquierer the applications interacts with the user. Asking which product id they would be intrested in buying and how many units would they be willing to purchase
   <img src="assets/images/bamazon_img3.PNG">
-
-- Once the user selects their prefered item, they will be promted to input the amount of times they would like to purchase.
-  <img src="assets/images/bamazon_img4.PNG">
