@@ -27,5 +27,6 @@ Node - The spine of our application that is enables us to connect with our datab
   <img src="assets/images/bamazon_img3.PNG">
 
 - Once the above step is complete the application will fetch the current inventory for the selected product Id. 
+    
     Route A: If inventory is less than the requested amount the application will alert the user that the order cannot be filled.
       <img src="assets/images/bamazon_img4.PNG">
